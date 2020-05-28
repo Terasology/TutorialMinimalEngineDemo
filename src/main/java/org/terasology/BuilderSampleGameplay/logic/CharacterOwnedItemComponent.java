@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 MovingBlocks
+ * Copyright 2020 MovingBlocks
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,6 +19,11 @@ import org.terasology.entitySystem.Component;
 import org.terasology.entitySystem.Owns;
 import org.terasology.entitySystem.entity.EntityRef;
 
+/**
+ * A single-slot inventory.
+ * <p>
+ * The character can own a single item while having this component attached.
+ */
 public class CharacterOwnedItemComponent implements Component {
     @Owns
     public EntityRef item;

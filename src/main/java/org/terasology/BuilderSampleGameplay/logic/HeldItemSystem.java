@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 MovingBlocks
+ * Copyright 2020 MovingBlocks
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,13 +24,21 @@ import org.terasology.logic.characters.events.ChangeHeldItemRequest;
 import org.terasology.logic.inventory.ItemComponent;
 import org.terasology.logic.inventory.events.GiveItemEvent;
 
+/**
+ * React to the character receiving an item and storing it in the {@link CharacterOwnedItemComponent}.
+ */
 @RegisterSystem
-public class BuilderHeldItemAuthoritySystem extends BaseComponentSystem {
+public class HeldItemSystem extends BaseComponentSystem {
+
     @ReceiveEvent
     public void onGiveItemToCharacterHoldItem(GiveItemEvent event, EntityRef item, ItemComponent itemComponent) {
-        if (event.getTargetEntity().hasComponent(CharacterHeldItemComponent.class)) {
-            event.getTargetEntity().addOrSaveComponent(new CharacterOwnedItemComponent(item));
-            event.getTargetEntity().send(new ChangeHeldItemRequest(item));
+        EntityRef targetEntity = event.getTargetEntity();
+
+        if (targetEntity.hasComponent(CharacterHeldItemComponent.class)) {
+            // Set or override the owned item to the new 'item'
+            targetEntity.addOrSaveComponent(new CharacterOwnedItemComponent(item));
+            // Trigger an event requesting to change the item held in hand to the newly gained 'item'
+            targetEntity.send(new ChangeHeldItemRequest(item));
             event.setHandled(true);
         }
     }
