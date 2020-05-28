@@ -32,8 +32,8 @@ public class BuilderWorldRasterizer implements WorldRasterizer {
 
     @Override
     public void initialize() {
-        dirt = CoreRegistry.get(BlockManager.class).getBlock("BuilderSampleGameplay:Dirt");
-        grass = CoreRegistry.get(BlockManager.class).getBlock("BuilderSampleGameplay:Grass");
+        dirt = CoreRegistry.get(BlockManager.class).getBlock("TutorialMinimalEngineDemo:Dirt");
+        grass = CoreRegistry.get(BlockManager.class).getBlock("TutorialMinimalEngineDemo:Grass");
     }
 
     @Override

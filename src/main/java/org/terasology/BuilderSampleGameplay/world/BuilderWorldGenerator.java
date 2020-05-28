@@ -22,7 +22,7 @@ import org.terasology.world.generation.WorldBuilder;
 import org.terasology.world.generator.RegisterWorldGenerator;
 import org.terasology.world.generator.plugin.WorldGeneratorPluginLibrary;
 
-@RegisterWorldGenerator(id = "builderSampleWorld", displayName = "Builder Sample World")
+@RegisterWorldGenerator(id = "minimalDemoWorld", displayName = "Minimal Demo World")
 public class BuilderWorldGenerator extends BaseFacetedWorldGenerator {
 
     @In

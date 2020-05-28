@@ -8,5 +8,5 @@
   "serverSideOnly": false,
   "isGameplay": "true",
   "isTutorial": true,
-  "defaultWorldGenerator": "BuilderSampleGameplay:BuilderSampleWorld"
+  "defaultWorldGenerator": "TutorialMinimalEngineDemo:minimalDemoWorld"
 }
