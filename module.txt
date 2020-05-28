@@ -1,12 +1,14 @@
 {
-  "id": "TutorialMinimalEngineDemo",
-  "version": "1.0.0",
-  "author": "The Terasology Foundation",
-  "displayName": "Tutorial - Minimal Engine Demo",
-  "description": "The last block you pick up is what you place.\nExtreme minimalistic gameplay setting to showcase engine running nearly solo (no inventory, health, etc). More for testing than playing",
-  "dependencies": [],
-  "serverSideOnly": false,
-  "isGameplay": "true",
-  "isTutorial": true,
-  "defaultWorldGenerator": "TutorialMinimalEngineDemo:minimalDemoWorld"
+    "id": "TutorialMinimalEngineDemo",
+    "version": "1.1.0",
+    "author": "The Terasology Foundation",
+    "displayName": "Tutorial - Minimal Engine Demo",
+    "description": "The last block you pick up is what you place.\nExtreme minimalistic gameplay setting to showcase engine running nearly solo (no inventory, health, etc). More for testing than playing",
+    "dependencies": [
+        { "id": "CoreRendering", "minVersion": "1.0.0" }
+    ],
+    "serverSideOnly": false,
+    "isGameplay": "true",
+    "isTutorial": true,
+    "defaultWorldGenerator": "TutorialMinimalEngineDemo:minimalDemoWorld"
 }
