@@ -16,6 +16,7 @@
 package org.terasology.tutorial.minimalenginedemo.world;
 
 import org.terasology.math.ChunkMath;
+import org.terasology.math.JomlUtil;
 import org.terasology.math.geom.Vector3i;
 import org.terasology.registry.CoreRegistry;
 import org.terasology.world.block.Block;
@@ -39,7 +40,7 @@ public class BuilderWorldRasterizer implements WorldRasterizer {
     @Override
     public void generateChunk(CoreChunk chunk, Region chunkRegion) {
         ElevationFacet elevationFacet = chunkRegion.getFacet(ElevationFacet.class);
-        for (Vector3i position : chunkRegion.getRegion()) {
+        for (Vector3i position : JomlUtil.from(chunkRegion.getRegion())) {
             float surfaceHeight = elevationFacet.getWorld(position.x, position.z);
             if (position.y < surfaceHeight - 1) {
                 chunk.setBlock(ChunkMath.calcRelativeBlockPos(position), dirt);
