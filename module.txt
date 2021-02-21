@@ -1,6 +1,6 @@
 {
     "id": "TutorialMinimalEngineDemo",
-    "version": "1.1.0",
+    "version": "1.1.1-SNAPSHOT",
     "author": "The Terasology Foundation",
     "displayName": "Tutorial - Minimal Engine Demo",
     "description": "The last block you pick up is what you place.\nExtreme minimalistic gameplay setting to showcase engine running nearly solo (no inventory, health, etc). More for testing than playing",
