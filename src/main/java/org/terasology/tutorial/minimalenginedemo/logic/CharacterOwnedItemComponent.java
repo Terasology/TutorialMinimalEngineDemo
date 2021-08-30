@@ -15,16 +15,16 @@
  */
 package org.terasology.tutorial.minimalenginedemo.logic;
 
-import org.terasology.engine.entitySystem.Component;
 import org.terasology.engine.entitySystem.Owns;
 import org.terasology.engine.entitySystem.entity.EntityRef;
+import org.terasology.gestalt.entitysystem.component.Component;
 
 /**
  * A single-slot inventory.
  * <p>
  * The character can own a single item while having this component attached.
  */
-public class CharacterOwnedItemComponent implements Component {
+public class CharacterOwnedItemComponent implements Component<CharacterOwnedItemComponent> {
     @Owns
     public EntityRef item;
 
@@ -33,5 +33,10 @@ public class CharacterOwnedItemComponent implements Component {
 
     public CharacterOwnedItemComponent(EntityRef item) {
         this.item = item;
+    }
+
+    @Override
+    public void copyFrom(CharacterOwnedItemComponent other) {
+        this.item = other.item;
     }
 }
