@@ -15,14 +15,14 @@
  */
 package org.terasology.tutorial.minimalenginedemo.logic;
 
-import org.terasology.entitySystem.entity.EntityRef;
-import org.terasology.entitySystem.event.ReceiveEvent;
-import org.terasology.entitySystem.systems.BaseComponentSystem;
-import org.terasology.entitySystem.systems.RegisterSystem;
-import org.terasology.logic.characters.CharacterHeldItemComponent;
-import org.terasology.logic.characters.events.ChangeHeldItemRequest;
-import org.terasology.logic.inventory.ItemComponent;
-import org.terasology.logic.inventory.events.GiveItemEvent;
+import org.terasology.engine.entitySystem.entity.EntityRef;
+import org.terasology.engine.entitySystem.event.ReceiveEvent;
+import org.terasology.engine.entitySystem.systems.BaseComponentSystem;
+import org.terasology.engine.entitySystem.systems.RegisterSystem;
+import org.terasology.engine.logic.characters.CharacterHeldItemComponent;
+import org.terasology.engine.logic.characters.events.ChangeHeldItemRequest;
+import org.terasology.engine.logic.inventory.ItemComponent;
+import org.terasology.engine.logic.inventory.events.GiveItemEvent;
 
 /**
  * React to the character receiving an item and storing it in the {@link CharacterOwnedItemComponent}.
